@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <style>
+        :root{
+            --base-color:  #1d1716;
+            --secondary-color:  #402a23;
+            --action-color: #a55233;
+            --layover-color: #f3bc77;
+        }
+
+        body {
+            background: rgb(29,23,22);
+            background: linear-gradient(90deg, rgba(29,23,22,1) 0%, rgba(64,42,35,1) 35%, rgba(165,82,51,1) 100%);           margin: 0;
+           padding: 0;
+           height: 100vh;
+           width: 100vw;
+           display:flex;
+           align-items: center;
+           font-family: "Roboto";
+       }
+       
+       .imageContainer{
+        width: 50%;
+        height: 100%;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+       }
+
+       #image1{
+        width: 100%;
+        height: 100%;
+       }
+
+       .mainContainer{
+        border: 5px solid var(--secondary-color);
+        display: flex;
+        align-items: center;
+        height: 60%
+       }
+
+       .formContainer{
+        height: 100%;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--layover-color);
+        text-align: center;
+
+       }
+       #loginIcon{
+        height: 20%;
+        width: 20%;
+       }
+
+       input[type="text"],
+       input[type="password"]{
+           width: 70%;
+           padding: 10px;
+           margin-bottom: 10px;
+           border: 1px solid #ccc;
+           box-sizing: border-box;
+           font-size: 15px;
+       }
+
+       button {
+           background-color: var(--action-color);
+           color: #fff;
+           cursor: pointer;
+           width: 50%;
+           height: 30px;
+           font-size: 15px;
+           border: none;
+           margin-top: 5px;
+       }
+
+       button:hover {
+           background-color: var(--secondary-color);
+       }
+    </style>
+</head>
+<body>
+    <div class="mainContainer">
+        <div class = "imageContainer">
+            <img src = "../images/wine.jpg" id = "image1">
+        </div>
+        <div class = "formContainer">
+            <img src = "../images/login.png" id = "loginIcon">
+            <h3>Enter Account Info:</h3>
+            <form id = "loginForm" action = "./home.html">
+                <input type = "text" name = "email" id = "email" placeholder="Email Address"/>
+                <input type = "password" name = "password" id = "password" placeholder = "Password"/>
+                <br>
+                <label>
+                    <input type="checkbox" name = "remember"/>
+                    Remember Me 
+                </label>
+                <br>
+                <button type = "submit">Login</button>
+                <div>
+                    <p> Create Account <a href = "../pages/register.html">Here!</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script type="module" src="../js/loginValidate.js"></script>
+</body>
+</html>
